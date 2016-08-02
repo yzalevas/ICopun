@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #02B3EF url(../img/full_pas.png) repeat-x left top;
+    background-color: #02B3EF;
+	font-family: Tahoma, Geneva, sans-serif, Verdana;
+	font-size: 12px;
+	line-height: 16px;
+	color: #4B4B4B;
+	text-align:center;
+	direction: rtl;
+	height: 100%;
+}
+
+#page {
+    text-align:right;
+	width:1020px;
+	margin: 0 auto;
+	position: relative;
+	top: 0;
+}
+
+#Results {
+	clear:both;
+	width:1020px;
+	margin: 10px 400px 0px 0px;
+}
+
+#Results .table {
+	background-color: #FFF;
+	border-width: 2px;
+	border-color: #0D82A8;
+	text-align: right;
+	direction:rtl;
+}
+#Results th{
+    text-align: right;
+}
+.clear {
+clear: both;
+}
+
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu > li {
+  display: inline;
+}
+
+.btn-buy{
+	border-radius: 32px;
+    font-size: 2.1rem;
+    line-height: 18px;
+    outline: 0;
+    padding: 1em 3.2rem;
+    position: relative;
+    width: 100%;
+    background-color: #53a318;
+    border: 1px solid #53a318;
+    color: #fff;
+    display: inline-block;
+    margin: 0;
+    min-width: 15rem;
+        overflow: visible;
+            text-align: center;
+    transition: background-color .2s ease-out,border-color .2s ease-out,color .2s ease-out;
+    text-decoration: none;
+}

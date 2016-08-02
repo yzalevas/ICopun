@@ -1,5 +1,30 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<section>
+<form ng-controller="View1Ctrl" class='form-inline'>
+  <section id="Search">
+       <label for="CategoriesSelect">חפש עסקה</label>
+      <input type="text" name="txtFieldValue" class="form-control" ng-model="data.fieldValue"/>
+      <button name="btnSearch" class="btn btn-default" ng-click="GetDealsClick()">Submit</button>
+      {{fieldValue}}
+    </section>
+    <section id="Results">
+      <table ng-if="products.deals.length>0"  class="table">
+        <tr>
+          <th> תמונה</th>
+          <th> כותרת</th>
+          <th> תיאור</th>
+          <th> מחיר</th>
+          <th> לקניה</th>
+        </tr>
+        <tr  ng-repeat="deal in products">
+          <td><img ng-src="{{deal.imageUrl}}"></img></td>
+          <td> {{deal.title}}</td>
+          <td> {{deal.price}}</td>
+          <td> {{deal.webSite}}</td>
+          <td><a class="btn-buy" ng-href='{{deal.link}}' target="_blank">לקניה!</a></td>
+        </tr>
+      </table>
+      </section>  
+    </section>
+   
+</form>
+</section>

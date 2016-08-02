@@ -1,1 +1,55 @@
-<p>This is the partial for view 1.</p>
+<section>
+<form ng-controller="View1Ctrl" class='form-inline'>
+  <section id="Search">
+       <label for="CategoriesSelect">בחר קטגוריה</label>
+       <select id="CategoriesSelect" class="form-control" ng-model='Categories' ng-change='GetGrouponDealsClick(item,$event)'  class="form-control">
+         <option>auto-and-home-improvement</option>
+         <option>baby-kids-and-toys</option>
+         <option>electronics</option>
+         <option>entertainment-and-media</option>
+         <option>health-and-beauty-goods</option>
+         <option>home-and-garden</option>
+         <option>household-essentials</option>
+         <option>jewelry-and-watches</option>
+         <option>men</option>
+         <option>sports-and-outdoors</option>
+         <option>automotive</option>
+         <option>beauty-and-spas</option>
+         <option>food-and-drink</option>
+         <option>health-and-fitness</option>
+         <option>home-improvement</option>
+         <option>local-services</option>
+         <option>shopping</option>
+         <option>things-to-do</option>
+         <option>accommodation</option>
+         <option>bed-and-breakfast-travel</option>
+         <option>cabin-travel</option>
+         <option>cruise-travel</option>
+         <option>hotels</option>
+         <option>resort-travel</option>
+         <option>tour-travel</option>
+         <option>vacation-rental-travel</option>
+      </select>
+    </section>
+    <section id="Results">
+      <table ng-if="products.deals.length>0"  class="table">
+        <tr>
+          <th> תמונה</th>
+          <th> כותרת</th>
+          <th> תיאור</th>
+          <th> מחיר</th>
+          <th> לקניה</th>
+        </tr>
+        <tr  ng-repeat="deal in products.deals">
+          <td><img ng-src="{{deal.largeImageUrl}}"></img></td>
+          <td> {{deal.title}}</td>
+          <td><div ng-bind-html="renderHtml(deal.highlightsHtml)"></div></td>
+          <td><div ng-bind-html="renderHtml(getPrice(deal))"></div></td>
+          <td><a class="btn-buy" ng-href='{{deal.dealUrl.replace("tracking","t")}}' target="_blank">לקניה!</a></td>
+        </tr>
+      </table>
+      </section>  
+    </section>
+   
+</form>
+</section>
